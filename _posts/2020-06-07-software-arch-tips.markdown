@@ -5,9 +5,9 @@ date:   2020-06-07 10:24:24 -0700
 categories: jekyll update
 ---
 # Build Your Own Radar
-https://www.thoughtworks.com/radar/how-to-byor
+[How to BYOR](https://www.thoughtworks.com/radar/how-to-byor)
 
-https://github.com/thoughtworks/build-your-own-radar
+[Github: BYOR](https://github.com/thoughtworks/build-your-own-radar)
 
 # Checklist
 List not the obvious but rather what's not obvious
