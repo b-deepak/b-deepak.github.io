@@ -32,6 +32,10 @@ linkedin_username: bhardwajdeepak
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-mermaid
+
+mermaid:
+  src: "https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.2/mermaid.js"
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
