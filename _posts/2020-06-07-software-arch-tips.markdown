@@ -87,4 +87,3 @@ flowchart LR
     * Pros/Cons
   * [Template](https://github.com/joelparkerhenderson/architecture_decision_record/blob/master/adr_template_madr.md)
   * [Example](https://adr.github.io/madr/template/0000-use-markdown-architectural-decision-records.html) 
-
