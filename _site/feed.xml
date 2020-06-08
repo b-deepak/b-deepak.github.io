@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-07T19:33:30-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">dejavudesi</title><subtitle>Random musings on architecture and some fun stuff.</subtitle><entry><title type="html">Software Architecture Tips</title><link href="http://localhost:4000/jekyll/update/2020/06/07/software-arch-tips.html" rel="alternate" type="text/html" title="Software Architecture Tips" /><published>2020-06-07T10:24:24-07:00</published><updated>2020-06-07T10:24:24-07:00</updated><id>http://localhost:4000/jekyll/update/2020/06/07/software-arch-tips</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/06/07/software-arch-tips.html">&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;“Architecture is about the important stuff. Whatever that is” - Ralph Johnson&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#circle-of-knowledge&quot;&gt;Circle of Knowledge&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#build-your-own-radar&quot;&gt;Build Your Own Radar&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#leverage-checklists&quot;&gt;Leverage Checklists&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#6-steps-in-refactoring-an-architecture&quot;&gt;6 steps in refactoring an architecture&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#cost-benefit-analysis&quot;&gt;Cost Benefit Analysis&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#architectural-decision-records-adrs&quot;&gt;Architectural Decision Records (ADRs)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;circle-of-knowledge&quot;&gt;Circle of Knowledge&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;SYK&lt;/strong&gt;: Stuff You Know&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;SYKYDK&lt;/strong&gt;: Stuff You Know You Don’t Know&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;SYDKYDK&lt;/strong&gt;: Stuff You Don’t Know You Don’t Know&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.2/mermaid.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;mermaid&quot;&gt;
+pie title Knowledge &amp;amp; Learning
+	&quot;SYK&quot; : 25	
+	&quot;SYKYDK&quot; : 25
+    &quot;SYDKYDK&quot; : 50
+&lt;/div&gt;
+
+&lt;h1 id=&quot;build-your-own-radar&quot;&gt;Build Your Own Radar&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.thoughtworks.com/radar/how-to-byor&quot;&gt;How to BYOR&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/thoughtworks/build-your-own-radar&quot;&gt;Github: BYOR&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;leverage-checklists&quot;&gt;Leverage Checklists&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;List not the obvious but rather what’s not obvious!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;6-steps-in-refactoring-an-architecture&quot;&gt;6 steps in refactoring an architecture&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;Root cause analysis&lt;/li&gt;
+  &lt;li&gt;Determine changes needed&lt;/li&gt;
+  &lt;li&gt;Create business case&lt;/li&gt;
+  &lt;li&gt;Build refactoring plan&lt;/li&gt;
+  &lt;li&gt;Create timeline and estimates&lt;/li&gt;
+  &lt;li&gt;Present to business&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;cost-benefit-analysis&quot;&gt;Cost Benefit Analysis&lt;/h1&gt;
+&lt;p&gt;The &lt;a href=&quot;https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=513476&quot;&gt;CBAM&lt;/a&gt; process consists of the following steps:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Choose scenarios and architectural strategies.&lt;/li&gt;
+  &lt;li&gt;Assess quality attribute benefits.&lt;/li&gt;
+  &lt;li&gt;Quantify the benefits of architectural strategies.&lt;/li&gt;
+  &lt;li&gt;Quantify the costs and schedule implications of the
+architectural strategies.&lt;/li&gt;
+  &lt;li&gt;Calculate the desirability of each option.&lt;/li&gt;
+  &lt;li&gt;Make architectural design decisions&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.2/mermaid.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;mermaid&quot;&gt;
+flowchart LR
+    A(Business Goals) --&amp;gt;|Define| B(Software Architecture \n-ilities &amp;amp; NFRs)
+    B --&amp;gt; D(Benefits)
+    B --&amp;gt; E(Cost)
+    D --&amp;gt; F{Assess}
+    E --&amp;gt; F
+    F --&amp;gt; G(Selection)
+&lt;/div&gt;
+
+&lt;h1 id=&quot;architectural-decision-records-adrs&quot;&gt;Architectural Decision Records (ADRs)&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://www.thoughtworks.com/radar/techniques/lightweight-architecture-decision-records&quot;&gt;Lightweight Architecture Decision Records&lt;/a&gt; is a technique for capturing important architectural decisions along with their context and consequences.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;ADR (Simple)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Sections:
+        &lt;ul&gt;
+          &lt;li&gt;Title&lt;/li&gt;
+          &lt;li&gt;Context&lt;/li&gt;
+          &lt;li&gt;Decision&lt;/li&gt;
+          &lt;li&gt;Status&lt;/li&gt;
+          &lt;li&gt;Consequences&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/joelparkerhenderson/architecture_decision_record/blob/master/adr_template_by_michael_nygard.md&quot;&gt;Template&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Examples
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://github.com/alphagov/govuk-aws/tree/master/doc/architecture/decisions&quot;&gt;here…&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;https://github.com/arachne-framework/architecture&quot;&gt;and here…&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;MADR (Options &amp;amp; Pros/Cons)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Sections:
+        &lt;ul&gt;
+          &lt;li&gt;Title&lt;/li&gt;
+          &lt;li&gt;Context&lt;/li&gt;
+          &lt;li&gt;Decision&lt;/li&gt;
+          &lt;li&gt;Considered Options&lt;/li&gt;
+          &lt;li&gt;Outcome/Consequences&lt;/li&gt;
+          &lt;li&gt;Pros/Cons&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/joelparkerhenderson/architecture_decision_record/blob/master/adr_template_madr.md&quot;&gt;Template&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://adr.github.io/madr/template/0000-use-markdown-architectural-decision-records.html&quot;&gt;Example&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">“Architecture is about the important stuff. Whatever that is” - Ralph Johnson</summary></entry></feed>
