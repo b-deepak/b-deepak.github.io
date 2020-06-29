@@ -4,6 +4,13 @@ title: Software Architect Tips Contd. - Soft Skills
 date: 2020-06-27 15:16 -0700
 ---
 
+- [Meeting Tips](#meeting-tips)
+- [Leadership Tips](#leadership-tips)
+- [Team Structure](#team-structure)
+- [Negotiation Skills](#negotiation-skills)
+- [Architecture Boundaries](#architecture-boundaries)
+- [Remember 3 C's of Architecture](#remember-3-cs-of-architecture)
+
 # Meeting Tips
 
 Prepare diligently in advance to make your case (esp. for important meetings)
@@ -46,7 +53,7 @@ Prepare diligently in advance to make your case (esp. for important meetings)
   - Pattern Governance
   - Defining Scope
 
-# Remember # C's of Architecture
+# Remember 3 C's of Architecture
 
 - Collaboration
 - Communication
