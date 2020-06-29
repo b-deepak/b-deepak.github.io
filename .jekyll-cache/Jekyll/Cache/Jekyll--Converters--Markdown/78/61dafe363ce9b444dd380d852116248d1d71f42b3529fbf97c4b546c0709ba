@@ -1,0 +1,125 @@
+I"�<blockquote>
+  <p><em>“Architecture is about the important stuff. Whatever that is” - Ralph Johnson</em></p>
+</blockquote>
+
+<ul>
+  <li><a href="#circle-of-knowledge">Circle of Knowledge</a></li>
+  <li><a href="#build-your-own-radar">Build Your Own Radar</a></li>
+  <li><a href="#leverage-checklists">Leverage Checklists</a></li>
+  <li><a href="#6-steps-in-refactoring-an-architecture">6 steps in refactoring an architecture</a></li>
+  <li><a href="#cost-benefit-analysis">Cost Benefit Analysis</a></li>
+  <li><a href="#architectural-decision-records-adrs">Architectural Decision Records (ADRs)</a></li>
+</ul>
+
+<h1 id="circle-of-knowledge">Circle of Knowledge</h1>
+
+<ul>
+  <li><strong>SYK</strong>: Stuff You Know</li>
+  <li><strong>SYKYDK</strong>: Stuff You Know You Don’t Know</li>
+  <li><strong>SYDKYDK</strong>: Stuff You Don’t Know You Don’t Know</li>
+</ul>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.2/mermaid.js"></script>
+<div class="mermaid">
+pie title Knowledge &amp; Learning
+"SYK" : 25
+"SYKYDK" : 25
+"SYDKYDK" : 50
+</div>
+
+<h1 id="build-your-own-radar">Build Your Own Radar</h1>
+
+<p><a href="https://www.thoughtworks.com/radar/how-to-byor">How to BYOR</a></p>
+
+<p><a href="https://github.com/thoughtworks/build-your-own-radar">Github: BYOR</a></p>
+
+<h1 id="leverage-checklists">Leverage Checklists</h1>
+
+<blockquote>
+  <p>List not the obvious but rather what’s not obvious!</p>
+</blockquote>
+
+<h1 id="6-steps-in-refactoring-an-architecture">6 steps in refactoring an architecture</h1>
+
+<ol>
+  <li>Root cause analysis</li>
+  <li>Determine changes needed</li>
+  <li>Create business case</li>
+  <li>Build refactoring plan</li>
+  <li>Create timeline and estimates</li>
+  <li>Present to business</li>
+</ol>
+
+<h1 id="cost-benefit-analysis">Cost Benefit Analysis</h1>
+
+<p>The <a href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=513476">CBAM</a> process consists of the following steps:</p>
+
+<ol>
+  <li>Choose scenarios and architectural strategies.</li>
+  <li>Assess quality attribute benefits.</li>
+  <li>Quantify the benefits of architectural strategies.</li>
+  <li>Quantify the costs and schedule implications of the
+architectural strategies.</li>
+  <li>Calculate the desirability of each option.</li>
+  <li>Make architectural design decisions</li>
+</ol>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.2/mermaid.js"></script>
+<div class="mermaid">
+flowchart LR
+A(Business Goals) --&gt;|Define| B(Software Architecture \n-ilities &amp; NFRs)
+B --&gt; D(Benefits)
+B --&gt; E(Cost)
+D --&gt; F{Assess}
+E --&gt; F
+F --&gt; G(Selection)
+</div>
+
+<h1 id="architectural-decision-records-adrs">Architectural Decision Records (ADRs)</h1>
+
+<blockquote>
+  <p><a href="https://www.thoughtworks.com/radar/techniques/lightweight-architecture-decision-records">Lightweight Architecture Decision Records</a> is a technique for capturing important architectural decisions along with their context and consequences.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p><strong>ADR (Simple)</strong></p>
+
+    <ul>
+      <li>Sections:
+        <ul>
+          <li>Title</li>
+          <li>Context</li>
+          <li>Decision</li>
+          <li>Status</li>
+          <li>Consequences</li>
+        </ul>
+      </li>
+      <li><a href="https://github.com/joelparkerhenderson/architecture_decision_record/blob/master/adr_template_by_michael_nygard.md">Template</a></li>
+      <li>Examples
+        <ul>
+          <li><a href="https://github.com/alphagov/govuk-aws/tree/master/doc/architecture/decisions">here…</a></li>
+          <li><a href="https://github.com/arachne-framework/architecture">and here…</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>MADR (Options &amp; Pros/Cons)</strong></p>
+    <ul>
+      <li>Sections:
+        <ul>
+          <li>Title</li>
+          <li>Context</li>
+          <li>Decision</li>
+          <li>Considered Options</li>
+          <li>Outcome/Consequences</li>
+          <li>Pros/Cons</li>
+        </ul>
+      </li>
+      <li><a href="https://github.com/joelparkerhenderson/architecture_decision_record/blob/master/adr_template_madr.md">Template</a></li>
+      <li><a href="https://adr.github.io/madr/template/0000-use-markdown-architectural-decision-records.html">Example</a></li>
+    </ul>
+  </li>
+</ul>
+:ET
