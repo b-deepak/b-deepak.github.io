@@ -9,15 +9,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="“Architecture is about the important stuff. Whatever that is” - Ralph Johnson" />
 <meta property="og:description" content="“Architecture is about the important stuff. Whatever that is” - Ralph Johnson" />
-<link rel="canonical" href="/jekyll/update/2020/06/07/software-arch-tips.html" />
-<meta property="og:url" content="/jekyll/update/2020/06/07/software-arch-tips.html" />
+<link rel="canonical" href="http://localhost:4000/jekyll/update/2020/06/07/software-arch-tips.html" />
+<meta property="og:url" content="http://localhost:4000/jekyll/update/2020/06/07/software-arch-tips.html" />
 <meta property="og:site_name" content="dejavudesi" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-06-07T10:24:24-07:00" />
 <script type="application/ld+json">
-{"url":"/jekyll/update/2020/06/07/software-arch-tips.html","headline":"Software Architecture Tips","dateModified":"2020-06-07T10:24:24-07:00","datePublished":"2020-06-07T10:24:24-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"/jekyll/update/2020/06/07/software-arch-tips.html"},"description":"“Architecture is about the important stuff. Whatever that is” - Ralph Johnson","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/jekyll/update/2020/06/07/software-arch-tips.html","headline":"Software Architecture Tips","dateModified":"2020-06-07T10:24:24-07:00","datePublished":"2020-06-07T10:24:24-07:00","description":"“Architecture is about the important stuff. Whatever that is” - Ralph Johnson","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2020/06/07/software-arch-tips.html"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="dejavudesi" /></head>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="dejavudesi" /></head>
 <body><header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/">dejavudesi</a><nav class="site-nav">
@@ -59,7 +59,6 @@
 </ul>
 
 <h1 id="circle-of-knowledge">Circle of Knowledge</h1>
-
 <ul>
   <li><strong>SYK</strong>: Stuff You Know</li>
   <li><strong>SYKYDK</strong>: Stuff You Know You Don’t Know</li>
@@ -69,25 +68,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.2/mermaid.js"></script>
 <div class="mermaid">
 pie title Knowledge &amp; Learning
-"SYK" : 25
-"SYKYDK" : 25
-"SYDKYDK" : 50
+	"SYK" : 25	
+	"SYKYDK" : 25
+    "SYDKYDK" : 50
 </div>
 
 <h1 id="build-your-own-radar">Build Your Own Radar</h1>
-
 <p><a href="https://www.thoughtworks.com/radar/how-to-byor">How to BYOR</a></p>
 
 <p><a href="https://github.com/thoughtworks/build-your-own-radar">Github: BYOR</a></p>
 
 <h1 id="leverage-checklists">Leverage Checklists</h1>
-
 <blockquote>
   <p>List not the obvious but rather what’s not obvious!</p>
 </blockquote>
 
 <h1 id="6-steps-in-refactoring-an-architecture">6 steps in refactoring an architecture</h1>
-
 <ol>
   <li>Root cause analysis</li>
   <li>Determine changes needed</li>
@@ -98,9 +94,7 @@ pie title Knowledge &amp; Learning
 </ol>
 
 <h1 id="cost-benefit-analysis">Cost Benefit Analysis</h1>
-
 <p>The <a href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=513476">CBAM</a> process consists of the following steps:</p>
-
 <ol>
   <li>Choose scenarios and architectural strategies.</li>
   <li>Assess quality attribute benefits.</li>
@@ -114,24 +108,21 @@ architectural strategies.</li>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.2/mermaid.js"></script>
 <div class="mermaid">
 flowchart LR
-A(Business Goals) --&gt;|Define| B(Software Architecture \n-ilities &amp; NFRs)
-B --&gt; D(Benefits)
-B --&gt; E(Cost)
-D --&gt; F{Assess}
-E --&gt; F
-F --&gt; G(Selection)
+    A(Business Goals) --&gt;|Define| B(Software Architecture \n-ilities &amp; NFRs)
+    B --&gt; D(Benefits)
+    B --&gt; E(Cost)
+    D --&gt; F{Assess}
+    E --&gt; F
+    F --&gt; G(Selection)
 </div>
 
 <h1 id="architectural-decision-records-adrs">Architectural Decision Records (ADRs)</h1>
-
 <blockquote>
   <p><a href="https://www.thoughtworks.com/radar/techniques/lightweight-architecture-decision-records">Lightweight Architecture Decision Records</a> is a technique for capturing important architectural decisions along with their context and consequences.</p>
 </blockquote>
 
 <ul>
-  <li>
-    <p><strong>ADR (Simple)</strong></p>
-
+  <li><strong>ADR (Simple)</strong>
     <ul>
       <li>Sections:
         <ul>
@@ -151,8 +142,7 @@ F --&gt; G(Selection)
       </li>
     </ul>
   </li>
-  <li>
-    <p><strong>MADR (Options &amp; Pros/Cons)</strong></p>
+  <li><strong>MADR (Options &amp; Pros/Cons)</strong>
     <ul>
       <li>Sections:
         <ul>
