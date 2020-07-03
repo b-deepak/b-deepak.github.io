@@ -1,4 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-28T21:29:29-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">dejavudesi</title><subtitle>Random musings on architecture and some fun stuff.</subtitle><entry><title type="html">Software Architect Tips Contd. - Soft Skills</title><link href="http://localhost:4000/2020/06/27/software-architect-tips-contd-soft-skills.html" rel="alternate" type="text/html" title="Software Architect Tips Contd. - Soft Skills" /><published>2020-06-27T15:16:00-07:00</published><updated>2020-06-27T15:16:00-07:00</updated><id>http://localhost:4000/2020/06/27/software-architect-tips-contd-soft-skills</id><content type="html" xml:base="http://localhost:4000/2020/06/27/software-architect-tips-contd-soft-skills.html">&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-07-03T10:31:35-07:00</updated><id>/feed.xml</id><title type="html">dejavudesi</title><subtitle>Random musings on architecture and some fun stuff.</subtitle><entry><title type="html">Raising Financially Responsible Children</title><link href="/2020/07/03/raising-financially-responsible-children.html" rel="alternate" type="text/html" title="Raising Financially Responsible Children" /><published>2020-07-03T09:18:00-07:00</published><updated>2020-07-03T09:18:00-07:00</updated><id>/2020/07/03/raising-financially-responsible-children</id><content type="html" xml:base="/2020/07/03/raising-financially-responsible-children.html">&lt;p&gt;This are some of the golden nuggets from an excellent financial independence podcast by &lt;a href=&quot;https://html5-player.libsyn.com/embed/episode/id/7539545/height/90/theme/custom/autoplay/no/autonext/no/thumbnail/yes/preload/no/no_addthis/no/direction/backward/render-playlist/no/custom-color/87A93A/&quot;&gt;JL Collins, Jane Collins, and Doug Nordman&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;grocery-matters&quot;&gt;Grocery Matters&lt;/h2&gt;
+
+&lt;p&gt;Once in a while, let your kids pay for grocery in cash to make them understand how money exchange works.&lt;/p&gt;
+
+&lt;h2 id=&quot;allowance&quot;&gt;Allowance:&lt;/h2&gt;
+
+&lt;p&gt;Give your kids allowance and “advise” them to save at least 50% in savings. The older they grow the more they would appreciate their savings balance. Carefully monitor the other 50% spent to determine the type of expenses and don’t step on their freedom entirely.&lt;/p&gt;
+
+&lt;h2 id=&quot;nature-vs-nurture&quot;&gt;Nature vs Nurture&lt;/h2&gt;
+
+&lt;p&gt;Put faith and trust your kids. Lectures do not work, trust does!&lt;/p&gt;
+
+&lt;h2 id=&quot;need-vs-want&quot;&gt;Need vs Want&lt;/h2&gt;
+
+&lt;p&gt;When buying something, question whether it is a need or a want? Make them understand the difference and why frugality always pays off in the longer run.&lt;/p&gt;
+
+&lt;h2 id=&quot;pseudo-401k-for-kids&quot;&gt;Pseudo-401k for Kids&lt;/h2&gt;
+
+&lt;p&gt;Match up their savings contribution every month just like a regular 401k. This will plant the importance of retirement savings when they start earning.&lt;/p&gt;
+
+&lt;p&gt;This also teaches the power of Compound Interest at an early age. For example, telling your 6 year kid to save for 10 years allows him/her to pay for their car at 16, is mind-blowing to them.&lt;/p&gt;
+
+&lt;h2 id=&quot;more-tips&quot;&gt;More Tips&lt;/h2&gt;
+
+&lt;p&gt;Model your own behavior, kids copy their parents for 90% of learnings. Conversations will matter only 10%.&lt;/p&gt;
+
+&lt;p&gt;Let them make mistakes. Let them learn from failing at home (a safer place) with their money.&lt;/p&gt;
+
+&lt;p&gt;For a paid subscription model to monitor expenses, checkout famzoo.com. (&lt;em&gt;Disclaimer: I am not a customer and have not personally used this app&lt;/em&gt;)&lt;/p&gt;
+
+&lt;h2 id=&quot;budgeting-formula&quot;&gt;Budgeting Formula&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;A dollar per month per year (of kid’s age)&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$1 X 1 day X 6 year old = $6/week = $24/month
+
+Now help them with their budget:
+
+Spend $12 on their discretionary things like toys, candies, books, videos etc.
+
+Save the other $12 in an interest savings account, match their contribution.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">This are some of the golden nuggets from an excellent financial independence podcast by JL Collins, Jane Collins, and Doug Nordman.</summary></entry><entry><title type="html">Software Architect Tips Contd. - Soft Skills</title><link href="/2020/06/27/software-architect-tips-contd-soft-skills.html" rel="alternate" type="text/html" title="Software Architect Tips Contd. - Soft Skills" /><published>2020-06-27T15:16:00-07:00</published><updated>2020-06-27T15:16:00-07:00</updated><id>/2020/06/27/software-architect-tips-contd-soft-skills</id><content type="html" xml:base="/2020/06/27/software-architect-tips-contd-soft-skills.html">&lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#meeting-tips&quot;&gt;Meeting Tips&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#leadership-tips&quot;&gt;Leadership Tips&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#team-structure&quot;&gt;Team Structure&lt;/a&gt;&lt;/li&gt;
@@ -74,7 +119,7 @@
   &lt;li&gt;Clarity&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;</content><author><name></name></author><summary type="html">Meeting Tips Leadership Tips Team Structure Negotiation Skills Architecture Boundaries Remember 3 C’s of Architecture</summary></entry><entry><title type="html">Software Architecture Tips</title><link href="http://localhost:4000/jekyll/update/2020/06/07/software-arch-tips.html" rel="alternate" type="text/html" title="Software Architecture Tips" /><published>2020-06-07T10:24:24-07:00</published><updated>2020-06-07T10:24:24-07:00</updated><id>http://localhost:4000/jekyll/update/2020/06/07/software-arch-tips</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/06/07/software-arch-tips.html">&lt;blockquote&gt;
+&lt;hr /&gt;</content><author><name></name></author><summary type="html">Meeting Tips Leadership Tips Team Structure Negotiation Skills Architecture Boundaries Remember 3 C’s of Architecture</summary></entry><entry><title type="html">Software Architecture Tips</title><link href="/jekyll/update/2020/06/07/software-arch-tips.html" rel="alternate" type="text/html" title="Software Architecture Tips" /><published>2020-06-07T10:24:24-07:00</published><updated>2020-06-07T10:24:24-07:00</updated><id>/jekyll/update/2020/06/07/software-arch-tips</id><content type="html" xml:base="/jekyll/update/2020/06/07/software-arch-tips.html">&lt;blockquote&gt;
   &lt;p&gt;&lt;em&gt;“Architecture is about the important stuff. Whatever that is” - Ralph Johnson&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
