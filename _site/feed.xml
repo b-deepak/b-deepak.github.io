@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-07-03T10:31:35-07:00</updated><id>/feed.xml</id><title type="html">dejavudesi</title><subtitle>Random musings on architecture and some fun stuff.</subtitle><entry><title type="html">Raising Financially Responsible Children</title><link href="/2020/07/03/raising-financially-responsible-children.html" rel="alternate" type="text/html" title="Raising Financially Responsible Children" /><published>2020-07-03T09:18:00-07:00</published><updated>2020-07-03T09:18:00-07:00</updated><id>/2020/07/03/raising-financially-responsible-children</id><content type="html" xml:base="/2020/07/03/raising-financially-responsible-children.html">&lt;p&gt;This are some of the golden nuggets from an excellent financial independence podcast by &lt;a href=&quot;https://html5-player.libsyn.com/embed/episode/id/7539545/height/90/theme/custom/autoplay/no/autonext/no/thumbnail/yes/preload/no/no_addthis/no/direction/backward/render-playlist/no/custom-color/87A93A/&quot;&gt;JL Collins, Jane Collins, and Doug Nordman&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;grocery-matters&quot;&gt;Grocery Matters&lt;/h2&gt;
+
+&lt;p&gt;Once in a while, let your kids pay for grocery in cash to make them understand how money exchange works.&lt;/p&gt;
+
+&lt;h2 id=&quot;allowance&quot;&gt;Allowance:&lt;/h2&gt;
+
+&lt;p&gt;Give your kids allowance and “advise” them to save at least 50% in savings. The older they grow the more they would appreciate their savings balance. Carefully monitor the other 50% spent to determine the type of expenses and don’t step on their freedom entirely.&lt;/p&gt;
+
+&lt;h2 id=&quot;nature-vs-nurture&quot;&gt;Nature vs Nurture&lt;/h2&gt;
+
+&lt;p&gt;Put faith and trust your kids. Lectures do not work, trust does!&lt;/p&gt;
+
+&lt;h2 id=&quot;need-vs-want&quot;&gt;Need vs Want&lt;/h2&gt;
+
+&lt;p&gt;When buying something, question whether it is a need or a want? Make them understand the difference and why frugality always pays off in the longer run.&lt;/p&gt;
+
+&lt;h2 id=&quot;pseudo-401k-for-kids&quot;&gt;Pseudo-401k for Kids&lt;/h2&gt;
+
+&lt;p&gt;Match up their savings contribution every month just like a regular 401k. This will plant the importance of retirement savings when they start earning.&lt;/p&gt;
+
+&lt;p&gt;This also teaches the power of Compound Interest at an early age. For example, telling your 6 year kid to save for 10 years allows him/her to pay for their car at 16, is mind-blowing to them.&lt;/p&gt;
+
+&lt;h2 id=&quot;more-tips&quot;&gt;More Tips&lt;/h2&gt;
+
+&lt;p&gt;Model your own behavior, kids copy their parents for 90% of learnings. Conversations will matter only 10%.&lt;/p&gt;
+
+&lt;p&gt;Let them make mistakes. Let them learn from failing at home (a safer place) with their money.&lt;/p&gt;
+
+&lt;p&gt;For a paid subscription model to monitor expenses, checkout famzoo.com. (&lt;em&gt;Disclaimer: I am not a customer and have not personally used this app&lt;/em&gt;)&lt;/p&gt;
+
+&lt;h2 id=&quot;budgeting-formula&quot;&gt;Budgeting Formula&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;A dollar per month per year (of kid’s age)&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$1 X 1 day X 6 year old = $6/week = $24/month
+
+Now help them with their budget:
+
+Spend $12 on their discretionary things like toys, candies, books, videos etc.
+
+Save the other $12 in an interest savings account, match their contribution.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">This are some of the golden nuggets from an excellent financial independence podcast by JL Collins, Jane Collins, and Doug Nordman.</summary></entry><entry><title type="html">Software Architect Tips Contd. - Soft Skills</title><link href="/2020/06/27/software-architect-tips-contd-soft-skills.html" rel="alternate" type="text/html" title="Software Architect Tips Contd. - Soft Skills" /><published>2020-06-27T15:16:00-07:00</published><updated>2020-06-27T15:16:00-07:00</updated><id>/2020/06/27/software-architect-tips-contd-soft-skills</id><content type="html" xml:base="/2020/06/27/software-architect-tips-contd-soft-skills.html">&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#meeting-tips&quot;&gt;Meeting Tips&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#leadership-tips&quot;&gt;Leadership Tips&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#team-structure&quot;&gt;Team Structure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#negotiation-skills&quot;&gt;Negotiation Skills&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#architecture-boundaries&quot;&gt;Architecture Boundaries&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#remember-3-cs-of-architecture&quot;&gt;Remember 3 C’s of Architecture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;meeting-tips&quot;&gt;Meeting Tips&lt;/h1&gt;
+
+&lt;p&gt;Prepare diligently in advance to make your case (esp. for important meetings)&lt;/p&gt;
+
+&lt;h1 id=&quot;leadership-tips&quot;&gt;Leadership Tips&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Keep it simple, concise and tailor context to the stakeholders&lt;/li&gt;
+  &lt;li&gt;For Complex Diagrams - Make a high level and then “peel the onion” by separate the components in separate slide/zoom-in&lt;/li&gt;
+  &lt;li&gt;Be pragmatic, yet visionary&lt;/li&gt;
+  &lt;li&gt;Aim for success, not perfection&lt;/li&gt;
+  &lt;li&gt;Lead by example, not by title. Contribute hands-on but communicate the amount of commitment in advance to business stakeholders. Don’t lose the perception of being an architect.&lt;/li&gt;
+  &lt;li&gt;Share the credit&lt;/li&gt;
+  &lt;li&gt;Be decisive and justify the decision.&lt;/li&gt;
+  &lt;li&gt;Stay positive and get along with people&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;team-structure&quot;&gt;Team Structure&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Make yourself available&lt;/li&gt;
+  &lt;li&gt;Conway’s Law&lt;/li&gt;
+  &lt;li&gt;Solution:
+    &lt;ul&gt;
+      &lt;li&gt;Inverse Conway’s Manuever - Create Cross Functional Teams&lt;/li&gt;
+      &lt;li&gt;Build products, not projects&lt;/li&gt;
+      &lt;li&gt;Leverage &lt;a href=&quot;https://thoughtworks.github.io/pacto/patterns/cdc/&quot;&gt;Consumer Driven Contracts&lt;/a&gt; for internal integrations&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;negotiation-skills&quot;&gt;Negotiation Skills&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Gather as much information from requirements before entering a negotiation&lt;/li&gt;
+  &lt;li&gt;If all else fails, pivot to cost and time factors&lt;/li&gt;
+  &lt;li&gt;Demonstrate your findings&lt;/li&gt;
+  &lt;li&gt;Techniques
+    &lt;ul&gt;
+      &lt;li&gt;Architectural trade-off based on functional and non-functional requirements&lt;/li&gt;
+      &lt;li&gt;Developer Buy-in&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;architecture-boundaries&quot;&gt;Architecture Boundaries&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Define architecture and design principles&lt;/li&gt;
+  &lt;li&gt;IMP: &lt;strong&gt;Justify&lt;/strong&gt; your decisions and &lt;strong&gt;Communicate&lt;/strong&gt;!&lt;/li&gt;
+  &lt;li&gt;Guide the team. Examples:
+    &lt;ul&gt;
+      &lt;li&gt;Libraries/Framework choices&lt;/li&gt;
+      &lt;li&gt;Pattern Governance&lt;/li&gt;
+      &lt;li&gt;Defining Scope&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;remember-3-cs-of-architecture&quot;&gt;Remember 3 C’s of Architecture&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Collaboration&lt;/li&gt;
+  &lt;li&gt;Communication&lt;/li&gt;
+  &lt;li&gt;Clarity&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;</content><author><name></name></author><summary type="html">Meeting Tips Leadership Tips Team Structure Negotiation Skills Architecture Boundaries Remember 3 C’s of Architecture</summary></entry><entry><title type="html">Software Architecture Tips</title><link href="/jekyll/update/2020/06/07/software-arch-tips.html" rel="alternate" type="text/html" title="Software Architecture Tips" /><published>2020-06-07T10:24:24-07:00</published><updated>2020-06-07T10:24:24-07:00</updated><id>/jekyll/update/2020/06/07/software-arch-tips</id><content type="html" xml:base="/jekyll/update/2020/06/07/software-arch-tips.html">&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;“Architecture is about the important stuff. Whatever that is” - Ralph Johnson&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#circle-of-knowledge&quot;&gt;Circle of Knowledge&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#build-your-own-radar&quot;&gt;Build Your Own Radar&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#leverage-checklists&quot;&gt;Leverage Checklists&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#6-steps-in-refactoring-an-architecture&quot;&gt;6 steps in refactoring an architecture&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#cost-benefit-analysis&quot;&gt;Cost Benefit Analysis&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#architectural-decision-records-adrs&quot;&gt;Architectural Decision Records (ADRs)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;circle-of-knowledge&quot;&gt;Circle of Knowledge&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;SYK&lt;/strong&gt;: Stuff You Know&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;SYKYDK&lt;/strong&gt;: Stuff You Know You Don’t Know&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;SYDKYDK&lt;/strong&gt;: Stuff You Don’t Know You Don’t Know&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.2/mermaid.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;mermaid&quot;&gt;
+pie title Knowledge &amp;amp; Learning
+&quot;SYK&quot; : 25
+&quot;SYKYDK&quot; : 25
+&quot;SYDKYDK&quot; : 50
+&lt;/div&gt;
+
+&lt;h1 id=&quot;build-your-own-radar&quot;&gt;Build Your Own Radar&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.thoughtworks.com/radar/how-to-byor&quot;&gt;How to BYOR&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/thoughtworks/build-your-own-radar&quot;&gt;Github: BYOR&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;leverage-checklists&quot;&gt;Leverage Checklists&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;List not the obvious but rather what’s not obvious!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;6-steps-in-refactoring-an-architecture&quot;&gt;6 steps in refactoring an architecture&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Root cause analysis&lt;/li&gt;
+  &lt;li&gt;Determine changes needed&lt;/li&gt;
+  &lt;li&gt;Create business case&lt;/li&gt;
+  &lt;li&gt;Build refactoring plan&lt;/li&gt;
+  &lt;li&gt;Create timeline and estimates&lt;/li&gt;
+  &lt;li&gt;Present to business&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;cost-benefit-analysis&quot;&gt;Cost Benefit Analysis&lt;/h1&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=513476&quot;&gt;CBAM&lt;/a&gt; process consists of the following steps:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Choose scenarios and architectural strategies.&lt;/li&gt;
+  &lt;li&gt;Assess quality attribute benefits.&lt;/li&gt;
+  &lt;li&gt;Quantify the benefits of architectural strategies.&lt;/li&gt;
+  &lt;li&gt;Quantify the costs and schedule implications of the
+architectural strategies.&lt;/li&gt;
+  &lt;li&gt;Calculate the desirability of each option.&lt;/li&gt;
+  &lt;li&gt;Make architectural design decisions&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.2/mermaid.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;mermaid&quot;&gt;
+flowchart LR
+A(Business Goals) --&amp;gt;|Define| B(Software Architecture \n-ilities &amp;amp; NFRs)
+B --&amp;gt; D(Benefits)
+B --&amp;gt; E(Cost)
+D --&amp;gt; F{Assess}
+E --&amp;gt; F
+F --&amp;gt; G(Selection)
+&lt;/div&gt;
+
+&lt;h1 id=&quot;architectural-decision-records-adrs&quot;&gt;Architectural Decision Records (ADRs)&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://www.thoughtworks.com/radar/techniques/lightweight-architecture-decision-records&quot;&gt;Lightweight Architecture Decision Records&lt;/a&gt; is a technique for capturing important architectural decisions along with their context and consequences.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;ADR (Simple)&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Sections:
+        &lt;ul&gt;
+          &lt;li&gt;Title&lt;/li&gt;
+          &lt;li&gt;Context&lt;/li&gt;
+          &lt;li&gt;Decision&lt;/li&gt;
+          &lt;li&gt;Status&lt;/li&gt;
+          &lt;li&gt;Consequences&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/joelparkerhenderson/architecture_decision_record/blob/master/adr_template_by_michael_nygard.md&quot;&gt;Template&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Examples
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://github.com/alphagov/govuk-aws/tree/master/doc/architecture/decisions&quot;&gt;here…&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;https://github.com/arachne-framework/architecture&quot;&gt;and here…&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;MADR (Options &amp;amp; Pros/Cons)&lt;/strong&gt;&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Sections:
+        &lt;ul&gt;
+          &lt;li&gt;Title&lt;/li&gt;
+          &lt;li&gt;Context&lt;/li&gt;
+          &lt;li&gt;Decision&lt;/li&gt;
+          &lt;li&gt;Considered Options&lt;/li&gt;
+          &lt;li&gt;Outcome/Consequences&lt;/li&gt;
+          &lt;li&gt;Pros/Cons&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/joelparkerhenderson/architecture_decision_record/blob/master/adr_template_madr.md&quot;&gt;Template&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://adr.github.io/madr/template/0000-use-markdown-architectural-decision-records.html&quot;&gt;Example&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">“Architecture is about the important stuff. Whatever that is” - Ralph Johnson</summary></entry></feed>
