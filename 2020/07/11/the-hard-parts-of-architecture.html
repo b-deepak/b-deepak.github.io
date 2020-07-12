@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>O’Reilly Training: The Hard Parts of Architecture | dejavudesi</title>
+<meta name="generator" content="Jekyll v4.1.0" />
+<meta property="og:title" content="O’Reilly Training: The Hard Parts of Architecture" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Goal" />
+<meta property="og:description" content="Goal" />
+<link rel="canonical" href="http://localhost:4000/2020/07/11/the-hard-parts-of-architecture.html" />
+<meta property="og:url" content="http://localhost:4000/2020/07/11/the-hard-parts-of-architecture.html" />
+<meta property="og:site_name" content="dejavudesi" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-11T20:20:00-07:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/2020/07/11/the-hard-parts-of-architecture.html","headline":"O’Reilly Training: The Hard Parts of Architecture","dateModified":"2020-07-11T20:20:00-07:00","datePublished":"2020-07-11T20:20:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/07/11/the-hard-parts-of-architecture.html"},"description":"Goal","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="dejavudesi" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">dejavudesi</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">O&#39;Reilly Training: The Hard Parts of Architecture</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-07-11T20:20:00-07:00" itemprop="datePublished">Jul 11, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="goal">Goal</h2>
+
+<p><img src="http://localhost:4000/assets/architecture_hard_parts_summary.jpg" alt="architecture hard parts summary" /></p>
+
+<h2 id="decisions">Decisions</h2>
+
+<ul>
+  <li>It Depends. Decisions are a trade-off!</li>
+  <li>Why &gt; How</li>
+  <li>Use Architectural Decision Record (ADR)
+    <ul>
+      <li>Title</li>
+      <li>Status</li>
+      <li>Context</li>
+      <li>Decision - <strong>Justification (Technical and Business)</strong></li>
+      <li>Consequences - <strong>Trade-offs</strong></li>
+    </ul>
+  </li>
+  <li>Example:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Title
+----
+Single consolidated payment service
+
+Context
+----
+A customer can use any payment type combination (credit card, paypal, store credit, and gift cards) when placing an order.
+
+Payment is required when pacing an order (synchronous activity). The payment logic can be either a single consolidated service or a separately deployed service for each payment type.
+
+Decision
+----
+We will use a single consolidated payment service for all payment types.
+
+Separating the services would require orchestration, which incurs both network and security latency. A single payment service will be more responsive since it does not require orchestration of each payment, therefore improving customer satisfaction when placing orders.
+
+Consequences
+----
+The tradeoff of this decision is that maintenance, testing, and deployment will be impacted when changes are made to any of the payment types or another payment type is added. Testing scope is increased, requiring more time for complete testing. Deployment risk is increased as deploying a single service requires deployment of all payment types. Error handling and transactions are maintained in a single consolidated service, improving overall data integrity, data consistency, and performance when errors occur. This also improves overall customer satisfaction when placing orders.
+
+The maintenance impact tradeoff was accepted by the business stakeholders in favor of better performance and data consistency when customers
+</code></pre></div></div>
+
+<h2 id="architecture-characteristics">Architecture Characteristics</h2>
+
+<ol>
+  <li>Synergistic</li>
+  <li>Ill-defined</li>
+  <li>Numerous Categories</li>
+  <li>Voluminous</li>
+</ol>
+
+<h2 id="the-9s-of-availability">The 9’s of Availability</h2>
+
+<p>Availability is usually expressed as a percentage of uptime in a given year.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Availability %</th>
+      <th>Downtime per year</th>
+      <th>Downtime per month</th>
+      <th>Downtime per day</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>90% (“one nine”)</td>
+      <td>36.53 days</td>
+      <td>73.05 hours</td>
+      <td>2.40 hours</td>
+    </tr>
+    <tr>
+      <td>99% (“two nines”)</td>
+      <td>3.65 days</td>
+      <td>7.31 hours</td>
+      <td>14.40 minutes</td>
+    </tr>
+    <tr>
+      <td>99.9% (“three nines”)</td>
+      <td>8.77 hours</td>
+      <td>43.83 minutes</td>
+      <td>1.44 minutes</td>
+    </tr>
+    <tr>
+      <td>99.99% (“four nines”)</td>
+      <td>52.60 minutes</td>
+      <td>4.38 minutes</td>
+      <td>8.64 seconds</td>
+    </tr>
+    <tr>
+      <td>99.999% (“five nines”)</td>
+      <td>5.26 minutes</td>
+      <td>26.30 seconds</td>
+      <td>864.00 milliseconds</td>
+    </tr>
+    <tr>
+      <td>99.9999% (“six nines”)</td>
+      <td>31.56 seconds</td>
+      <td>2.63 seconds</td>
+      <td>86.40 milliseconds</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="connascence--coupling">Connascence / Coupling</h1>
+
+<blockquote>
+  <p><em><a href="https://connascence.io/">Connascence</a> is a software quality metric &amp; a taxonomy for different types of coupling.</em></p>
+</blockquote>
+
+<p>Types:</p>
+
+<ol>
+  <li><strong>Static</strong> - name, type, meaning, position, algorithm</li>
+  <li><strong>Dynamic</strong> - execution, timing, value, identity</li>
+</ol>
+
+<p>Axes of Measure:</p>
+
+<ol>
+  <li><strong>Strength</strong></li>
+  <li><strong>Degree</strong></li>
+  <li><strong>Locality</strong></li>
+</ol>
+
+<h2 id="architectural-quantum">Architectural Quantum</h2>
+
+<blockquote>
+  <p>An architectural quantum is an independently deployable component with high functional cohesion and synchronous dynamic quantum connascence.</p>
+</blockquote>
+
+<h2 id="choosing-an-architecture">Choosing an Architecture</h2>
+
+<p><img src="http://localhost:4000/assets/choosing_an_architecture.jpg" alt="choosing an architecture" /></p>
+
+<h2 id="service-granularity">Service Granularity</h2>
+
+<p>Get granularity right by iteration!</p>
+
+<h3 id="drivers">Drivers</h3>
+
+<blockquote>
+  <p><em>When should I consider breaking apart a service?</em></p>
+</blockquote>
+
+<ul>
+  <li>Functionality or Domain</li>
+  <li>Code Volatility</li>
+  <li>Scalability and Throughput</li>
+  <li>Fault Tolerance</li>
+  <li>Data Security</li>
+</ul>
+
+<h3 id="factors">Factors</h3>
+
+<blockquote>
+  <p><em>What factors influence service granularity?</em></p>
+</blockquote>
+
+<ul>
+  <li>Database Transactions</li>
+  <li>Data Dependencies</li>
+  <li>Communication Pattern i.e. Orchestration (Workflow) vs Choreography</li>
+</ul>
+
+<h2 id="evolutionary-architecture">Evolutionary Architecture</h2>
+
+<p>An evolutionary architecture supports <strong>guided, incremental change</strong> across multiple dimensions.</p>
+
+<h3 id="fitness-functions">Fitness Functions</h3>
+
+<blockquote>
+  <p><em>Any mechanism that provides an objective integrity assessment of some architectural characteristic(s).</em></p>
+</blockquote>
+
+<p>Examples:</p>
+
+<ul>
+  <li>Cyclic Dependency Function in Code Quality Tools</li>
+  <li>Zero Day Security Check Function in Build Pipeline</li>
+  <li>Contract Fitness Function using <a href="https://www.martinfowler.com/articles/consumerDrivenContracts.html">Consumer Driven Contracts</a>
+    <ul>
+      <li>Tool: <a href="https://docs.pact.io/">Pact</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Architecture Governance Tools:</p>
+
+<ul>
+  <li>Java - <a href="https://www.archunit.org/">ArchUnit</a></li>
+  <li>.NET - <a href="https://github.com/BenMorris/NetArchTest">NetArchTest</a>, <a href="https://www.sonarqube.org/">SonarQube</a></li>
+</ul>
+
+<h2 id="coupling">Coupling</h2>
+
+<blockquote>
+  <p><em>Aim for <strong>High Semantic Coupling</strong> &amp; <strong>Low Syntactic Coupling</strong></em></p>
+</blockquote>
+
+<p><strong>Contract Types and Trade-offs</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Strict Contracts</th>
+      <th>Value Based Contracts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Method Signatures. Ex. SOAP, gRPC etc.</td>
+      <td>Name-Value Pairs. Ex. JSON</td>
+    </tr>
+    <tr>
+      <td>better control of exact parameter passing</td>
+      <td>requires fitness functions</td>
+    </tr>
+    <tr>
+      <td>brittle architecture coupling</td>
+      <td>requires documentation</td>
+    </tr>
+    <tr>
+      <td>better documentation via type signatures</td>
+      <td>extremely loose coupling</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="managing-data-in-a-distributed-system">Managing Data in a Distributed System</h2>
+
+<ul>
+  <li>Inter-Service Communication</li>
+  <li>Data Replication</li>
+  <li>In-Memory Replicated Cache</li>
+  <li>Data Domains (Shared Tables)</li>
+</ul>
+
+<h2 id="achieving-scalability-and-elasticity">Achieving Scalability and Elasticity</h2>
+
+<p>Patterns to leverage in Microservices:</p>
+
+<ul>
+  <li>Cache</li>
+  <li>Sidecar Containers with Service Mesh</li>
+</ul>
+
+  </div><a class="u-url" href="/2020/07/11/the-hard-parts-of-architecture.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">dejavudesi</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">dejavudesi</li><li><a class="u-email" href="mailto:...@gmail.com">...@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/b-deepak"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">b-deepak</span></a></li><li><a href="https://www.linkedin.com/in/bhardwajdeepak"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">bhardwajdeepak</span></a></li><li><a href="https://www.twitter.com/dejavudesi"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">dejavudesi</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Random musings on architecture and some fun stuff.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

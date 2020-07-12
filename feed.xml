@@ -1,4 +1,251 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-11T20:02:49-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">dejavudesi</title><subtitle>Random musings on architecture and some fun stuff.</subtitle><entry><title type="html">Raising Financially Responsible Children</title><link href="http://localhost:4000/2020/07/03/raising-financially-responsible-children.html" rel="alternate" type="text/html" title="Raising Financially Responsible Children" /><published>2020-07-03T09:18:00-07:00</published><updated>2020-07-03T09:18:00-07:00</updated><id>http://localhost:4000/2020/07/03/raising-financially-responsible-children</id><content type="html" xml:base="http://localhost:4000/2020/07/03/raising-financially-responsible-children.html">&lt;p&gt;This are some of the golden nuggets from an excellent financial independence podcast by &lt;a href=&quot;https://html5-player.libsyn.com/embed/episode/id/7539545/height/90/theme/custom/autoplay/no/autonext/no/thumbnail/yes/preload/no/no_addthis/no/direction/backward/render-playlist/no/custom-color/87A93A/&quot;&gt;JL Collins, Jane Collins, and Doug Nordman&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-12T11:24:42-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">dejavudesi</title><subtitle>Random musings on architecture and some fun stuff.</subtitle><entry><title type="html">O’Reilly Training: The Hard Parts of Architecture</title><link href="http://localhost:4000/2020/07/11/the-hard-parts-of-architecture.html" rel="alternate" type="text/html" title="O'Reilly Training: The Hard Parts of Architecture" /><published>2020-07-11T20:20:00-07:00</published><updated>2020-07-11T20:20:00-07:00</updated><id>http://localhost:4000/2020/07/11/the-hard-parts-of-architecture</id><content type="html" xml:base="http://localhost:4000/2020/07/11/the-hard-parts-of-architecture.html">&lt;h2 id=&quot;goal&quot;&gt;Goal&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/architecture_hard_parts_summary.jpg&quot; alt=&quot;architecture hard parts summary&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;decisions&quot;&gt;Decisions&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It Depends. Decisions are a trade-off!&lt;/li&gt;
+  &lt;li&gt;Why &amp;gt; How&lt;/li&gt;
+  &lt;li&gt;Use Architectural Decision Record (ADR)
+    &lt;ul&gt;
+      &lt;li&gt;Title&lt;/li&gt;
+      &lt;li&gt;Status&lt;/li&gt;
+      &lt;li&gt;Context&lt;/li&gt;
+      &lt;li&gt;Decision - &lt;strong&gt;Justification (Technical and Business)&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Consequences - &lt;strong&gt;Trade-offs&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Example:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Title
+----
+Single consolidated payment service
+
+Context
+----
+A customer can use any payment type combination (credit card, paypal, store credit, and gift cards) when placing an order.
+
+Payment is required when pacing an order (synchronous activity). The payment logic can be either a single consolidated service or a separately deployed service for each payment type.
+
+Decision
+----
+We will use a single consolidated payment service for all payment types.
+
+Separating the services would require orchestration, which incurs both network and security latency. A single payment service will be more responsive since it does not require orchestration of each payment, therefore improving customer satisfaction when placing orders.
+
+Consequences
+----
+The tradeoff of this decision is that maintenance, testing, and deployment will be impacted when changes are made to any of the payment types or another payment type is added. Testing scope is increased, requiring more time for complete testing. Deployment risk is increased as deploying a single service requires deployment of all payment types. Error handling and transactions are maintained in a single consolidated service, improving overall data integrity, data consistency, and performance when errors occur. This also improves overall customer satisfaction when placing orders.
+
+The maintenance impact tradeoff was accepted by the business stakeholders in favor of better performance and data consistency when customers
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;architecture-characteristics&quot;&gt;Architecture Characteristics&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Synergistic&lt;/li&gt;
+  &lt;li&gt;Ill-defined&lt;/li&gt;
+  &lt;li&gt;Numerous Categories&lt;/li&gt;
+  &lt;li&gt;Voluminous&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;the-9s-of-availability&quot;&gt;The 9’s of Availability&lt;/h2&gt;
+
+&lt;p&gt;Availability is usually expressed as a percentage of uptime in a given year.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Availability %&lt;/th&gt;
+      &lt;th&gt;Downtime per year&lt;/th&gt;
+      &lt;th&gt;Downtime per month&lt;/th&gt;
+      &lt;th&gt;Downtime per day&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;90% (“one nine”)&lt;/td&gt;
+      &lt;td&gt;36.53 days&lt;/td&gt;
+      &lt;td&gt;73.05 hours&lt;/td&gt;
+      &lt;td&gt;2.40 hours&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;99% (“two nines”)&lt;/td&gt;
+      &lt;td&gt;3.65 days&lt;/td&gt;
+      &lt;td&gt;7.31 hours&lt;/td&gt;
+      &lt;td&gt;14.40 minutes&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;99.9% (“three nines”)&lt;/td&gt;
+      &lt;td&gt;8.77 hours&lt;/td&gt;
+      &lt;td&gt;43.83 minutes&lt;/td&gt;
+      &lt;td&gt;1.44 minutes&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;99.99% (“four nines”)&lt;/td&gt;
+      &lt;td&gt;52.60 minutes&lt;/td&gt;
+      &lt;td&gt;4.38 minutes&lt;/td&gt;
+      &lt;td&gt;8.64 seconds&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;99.999% (“five nines”)&lt;/td&gt;
+      &lt;td&gt;5.26 minutes&lt;/td&gt;
+      &lt;td&gt;26.30 seconds&lt;/td&gt;
+      &lt;td&gt;864.00 milliseconds&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;99.9999% (“six nines”)&lt;/td&gt;
+      &lt;td&gt;31.56 seconds&lt;/td&gt;
+      &lt;td&gt;2.63 seconds&lt;/td&gt;
+      &lt;td&gt;86.40 milliseconds&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&quot;connascence--coupling&quot;&gt;Connascence / Coupling&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://connascence.io/&quot;&gt;Connascence&lt;/a&gt; is a software quality metric &amp;amp; a taxonomy for different types of coupling.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Types:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Static&lt;/strong&gt; - name, type, meaning, position, algorithm&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Dynamic&lt;/strong&gt; - execution, timing, value, identity&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Axes of Measure:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Strength&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Degree&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Locality&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;architectural-quantum&quot;&gt;Architectural Quantum&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;An architectural quantum is an independently deployable component with high functional cohesion and synchronous dynamic quantum connascence.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;choosing-an-architecture&quot;&gt;Choosing an Architecture&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/choosing_an_architecture.jpg&quot; alt=&quot;choosing an architecture&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;service-granularity&quot;&gt;Service Granularity&lt;/h2&gt;
+
+&lt;p&gt;Get granularity right by iteration!&lt;/p&gt;
+
+&lt;h3 id=&quot;drivers&quot;&gt;Drivers&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;When should I consider breaking apart a service?&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Functionality or Domain&lt;/li&gt;
+  &lt;li&gt;Code Volatility&lt;/li&gt;
+  &lt;li&gt;Scalability and Throughput&lt;/li&gt;
+  &lt;li&gt;Fault Tolerance&lt;/li&gt;
+  &lt;li&gt;Data Security&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;factors&quot;&gt;Factors&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;What factors influence service granularity?&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Database Transactions&lt;/li&gt;
+  &lt;li&gt;Data Dependencies&lt;/li&gt;
+  &lt;li&gt;Communication Pattern i.e. Orchestration (Workflow) vs Choreography&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;evolutionary-architecture&quot;&gt;Evolutionary Architecture&lt;/h2&gt;
+
+&lt;p&gt;An evolutionary architecture supports &lt;strong&gt;guided, incremental change&lt;/strong&gt; across multiple dimensions.&lt;/p&gt;
+
+&lt;h3 id=&quot;fitness-functions&quot;&gt;Fitness Functions&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Any mechanism that provides an objective integrity assessment of some architectural characteristic(s).&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Examples:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Cyclic Dependency Function in Code Quality Tools&lt;/li&gt;
+  &lt;li&gt;Zero Day Security Check Function in Build Pipeline&lt;/li&gt;
+  &lt;li&gt;Contract Fitness Function using &lt;a href=&quot;https://www.martinfowler.com/articles/consumerDrivenContracts.html&quot;&gt;Consumer Driven Contracts&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Tool: &lt;a href=&quot;https://docs.pact.io/&quot;&gt;Pact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Architecture Governance Tools:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Java - &lt;a href=&quot;https://www.archunit.org/&quot;&gt;ArchUnit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;.NET - &lt;a href=&quot;https://github.com/BenMorris/NetArchTest&quot;&gt;NetArchTest&lt;/a&gt;, &lt;a href=&quot;https://www.sonarqube.org/&quot;&gt;SonarQube&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;coupling&quot;&gt;Coupling&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Aim for &lt;strong&gt;High Semantic Coupling&lt;/strong&gt; &amp;amp; &lt;strong&gt;Low Syntactic Coupling&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Contract Types and Trade-offs&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Strict Contracts&lt;/th&gt;
+      &lt;th&gt;Value Based Contracts&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Method Signatures. Ex. SOAP, gRPC etc.&lt;/td&gt;
+      &lt;td&gt;Name-Value Pairs. Ex. JSON&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;better control of exact parameter passing&lt;/td&gt;
+      &lt;td&gt;requires fitness functions&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;brittle architecture coupling&lt;/td&gt;
+      &lt;td&gt;requires documentation&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;better documentation via type signatures&lt;/td&gt;
+      &lt;td&gt;extremely loose coupling&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;managing-data-in-a-distributed-system&quot;&gt;Managing Data in a Distributed System&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Inter-Service Communication&lt;/li&gt;
+  &lt;li&gt;Data Replication&lt;/li&gt;
+  &lt;li&gt;In-Memory Replicated Cache&lt;/li&gt;
+  &lt;li&gt;Data Domains (Shared Tables)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;achieving-scalability-and-elasticity&quot;&gt;Achieving Scalability and Elasticity&lt;/h2&gt;
+
+&lt;p&gt;Patterns to leverage in Microservices:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Cache&lt;/li&gt;
+  &lt;li&gt;Sidecar Containers with Service Mesh&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Goal</summary></entry><entry><title type="html">Raising Financially Responsible Children</title><link href="http://localhost:4000/2020/07/03/raising-financially-responsible-children.html" rel="alternate" type="text/html" title="Raising Financially Responsible Children" /><published>2020-07-03T09:18:00-07:00</published><updated>2020-07-03T09:18:00-07:00</updated><id>http://localhost:4000/2020/07/03/raising-financially-responsible-children</id><content type="html" xml:base="http://localhost:4000/2020/07/03/raising-financially-responsible-children.html">&lt;p&gt;This are some of the golden nuggets from an excellent financial independence podcast by &lt;a href=&quot;https://html5-player.libsyn.com/embed/episode/id/7539545/height/90/theme/custom/autoplay/no/autonext/no/thumbnail/yes/preload/no/no_addthis/no/direction/backward/render-playlist/no/custom-color/87A93A/&quot;&gt;JL Collins, Jane Collins, and Doug Nordman&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;grocery-matters&quot;&gt;Grocery Matters&lt;/h2&gt;
 
@@ -90,7 +337,7 @@ Save the other $12 in an interest savings account, match their contribution.
       &lt;td&gt;Decide on and communicate future plans, including how assets will be divided (e.g., to family members, charities, or both).&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name></name></author><summary type="html">This are some of the golden nuggets from an excellent financial independence podcast by JL Collins, Jane Collins, and Doug Nordman.</summary></entry><entry><title type="html">Software Architect Tips Contd. - Soft Skills</title><link href="http://localhost:4000/2020/06/27/software-architect-tips-contd-soft-skills.html" rel="alternate" type="text/html" title="Software Architect Tips Contd. - Soft Skills" /><published>2020-06-27T15:16:00-07:00</published><updated>2020-06-27T15:16:00-07:00</updated><id>http://localhost:4000/2020/06/27/software-architect-tips-contd-soft-skills</id><content type="html" xml:base="http://localhost:4000/2020/06/27/software-architect-tips-contd-soft-skills.html">&lt;ul&gt;
+&lt;/table&gt;</content><author><name></name></author><summary type="html">This are some of the golden nuggets from an excellent financial independence podcast by JL Collins, Jane Collins, and Doug Nordman.</summary></entry><entry><title type="html">O’Reilly Training: Software Architect Tips Contd. - Soft Skills</title><link href="http://localhost:4000/2020/06/27/software-architect-tips-contd-soft-skills.html" rel="alternate" type="text/html" title="O'Reilly Training: Software Architect Tips Contd. - Soft Skills" /><published>2020-06-27T15:16:00-07:00</published><updated>2020-06-27T15:16:00-07:00</updated><id>http://localhost:4000/2020/06/27/software-architect-tips-contd-soft-skills</id><content type="html" xml:base="http://localhost:4000/2020/06/27/software-architect-tips-contd-soft-skills.html">&lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#meeting-tips&quot;&gt;Meeting Tips&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#leadership-tips&quot;&gt;Leadership Tips&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#team-structure&quot;&gt;Team Structure&lt;/a&gt;&lt;/li&gt;
@@ -166,7 +413,7 @@ Save the other $12 in an interest savings account, match their contribution.
   &lt;li&gt;Clarity&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;</content><author><name></name></author><summary type="html">Meeting Tips Leadership Tips Team Structure Negotiation Skills Architecture Boundaries Remember 3 C’s of Architecture</summary></entry><entry><title type="html">Software Architecture Tips</title><link href="http://localhost:4000/jekyll/update/2020/06/07/software-arch-tips.html" rel="alternate" type="text/html" title="Software Architecture Tips" /><published>2020-06-07T10:24:24-07:00</published><updated>2020-06-07T10:24:24-07:00</updated><id>http://localhost:4000/jekyll/update/2020/06/07/software-arch-tips</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/06/07/software-arch-tips.html">&lt;blockquote&gt;
+&lt;hr /&gt;</content><author><name></name></author><summary type="html">Meeting Tips Leadership Tips Team Structure Negotiation Skills Architecture Boundaries Remember 3 C’s of Architecture</summary></entry><entry><title type="html">O’Reilly Training: Software Architecture Tips</title><link href="http://localhost:4000/jekyll/update/2020/06/07/software-arch-tips.html" rel="alternate" type="text/html" title="O'Reilly Training: Software Architecture Tips" /><published>2020-06-07T10:24:24-07:00</published><updated>2020-06-07T10:24:24-07:00</updated><id>http://localhost:4000/jekyll/update/2020/06/07/software-arch-tips</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/06/07/software-arch-tips.html">&lt;blockquote&gt;
   &lt;p&gt;&lt;em&gt;“Architecture is about the important stuff. Whatever that is” - Ralph Johnson&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
