@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Software Architect Tips Contd. - Soft Skills
+title: "O'Reilly Training: Software Architect Tips Contd. - Soft Skills"
 date: 2020-06-27 15:16 -0700
 ---
 

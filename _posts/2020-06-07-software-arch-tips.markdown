@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Software Architecture Tips"
+title: "O'Reilly Training: Software Architecture Tips"
 date: 2020-06-07 10:24:24 -0700
 categories: jekyll update
 ---
